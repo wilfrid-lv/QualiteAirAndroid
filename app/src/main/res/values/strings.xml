@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Qualité de l\'air</string>
+    <string name="connexion">connexion</string>
+    <string name="identifiant">Identifiant</string>
+    <string name="mdp">Mot de passe</string>
+    <string name="taux">Taux de CO2</string>
+</resources>
