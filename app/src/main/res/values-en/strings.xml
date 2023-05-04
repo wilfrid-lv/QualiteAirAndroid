@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Air quality</string>
+    <string name="connexion">connection</string>
+    <string name="identifiant">Login</string>
+    <string name="mdp">MPassword</string>
+    <string name="taux">CO2 rate</string>
+</resources>

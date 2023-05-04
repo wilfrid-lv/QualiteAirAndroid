@@ -12,6 +12,9 @@ import org.eclipse.paho.android.service.MqttAndroidClient
 import org.eclipse.paho.client.mqttv3.*
 import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+
 
 
 
@@ -40,6 +43,29 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {//il faudrait mettre connexion dedans et enable le bouton tant que des infos ne sont pas renté dans les champs
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //initialiser le choix de langue
+        val languages = resources.getStringArray(R.array.choix_langues).toList()
+        val spinner = findViewById<Spinner>(R.id.spinner_langues)
+        val adapter = ArrayAdapter.createFromResource(this, R.array.choix_langues, android.R.layout.simple_spinner_item)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapter
+
+        /*
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedLanguage = languages[position]
+                // TODO: Changer la langue de l'application
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // Ne rien faire lorsque rien n'est sélectionné
+            }
+        }*/
+
+
+
+
 
         val btnConnexion = findViewById<Button>(R.id.connexion)
         btnConnexion.setOnClickListener {
