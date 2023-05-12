@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calidad del aire</string>
+    <string name="connexion">conexión</string>
+    <string name="langue">lengua</string>
+    <string name="identifiant">Identificador</string>
+    <string name="mdp">Contraseña</string>
+    <string name="taux">tasa de co2</string>
+</resources>

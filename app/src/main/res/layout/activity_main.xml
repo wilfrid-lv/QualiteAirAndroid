@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:textAlignment="center"
-    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        tools:context=".MainActivity">
 
 
-    <Spinner
+
+    <!--<Spinner
         android:id="@+id/spinner_langues"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,34 +19,34 @@
         android:layout_marginEnd="20dp"
         android:entries="@array/choix_langues"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
     <TextView
         android:id="@+id/Titre"
         android:layout_width="163dp"
         android:layout_height="29dp"
         android:layout_marginTop="100dp"
-        android:text="Qualité de l'air"
+        android:text="@string/app_name"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/identifiant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/identifiant"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Titre" />
+        <EditText
+            android:id="@+id/identifiant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="@string/identifiant"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titre" />
 
-    <EditText
+        <EditText
         android:id="@+id/MotDePasse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,20 +62,36 @@
         android:id="@+id/connexion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="28dp"
         android:onClick="connexion"
         android:text="@string/connexion"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MotDePasse" />
 
+    <Button
+        android:id="@+id/langue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="connexion"
+        android:text="@string/langue"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connexion" />
+
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="159dp"
         android:layout_height="157dp"
         android:layout_marginBottom="100dp"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/connexion" />
+        app:layout_constraintTop_toBottomOf="@+id/connexion"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

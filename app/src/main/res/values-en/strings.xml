@@ -2,7 +2,8 @@
 <resources>
     <string name="app_name">Air quality</string>
     <string name="connexion">connection</string>
+    <string name="langue">language</string>
     <string name="identifiant">Login</string>
-    <string name="mdp">MPassword</string>
+    <string name="mdp">Password</string>
     <string name="taux">CO2 rate</string>
 </resources>
