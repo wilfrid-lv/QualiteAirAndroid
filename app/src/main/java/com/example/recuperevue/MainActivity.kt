@@ -27,9 +27,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        setContentView(R.layout.activity_main)
-        setLocate("fr")
         //loadLocate()
+        setContentView(R.layout.activity_main)
+        //setLocate("fr")
+
 
 
 
@@ -85,10 +86,14 @@ class MainActivity : AppCompatActivity() {
         config.setLocale(locale)
         val newContext = createConfigurationContext(config)
         //baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+        resources.updateConfiguration(config, resources.displayMetrics)
+
         val editor = getSharedPreferences("Settings", Context.MODE_PRIVATE).edit()
         editor.putString("My_Lang", Lang)
         editor.apply()
+        recreate()
     }
+
 
     private fun loadLocate() {
         val sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE)
